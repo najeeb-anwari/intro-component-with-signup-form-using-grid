@@ -8,7 +8,13 @@
     src: url('../fonts//Poppins/Poppins-Bold.ttf');
     font-weight: bold;
     font-style: normal;
-  }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 :root {
    /** Primary **/
@@ -20,10 +26,12 @@
     --dark-blue: hsl(249, 10%, 26%); 
     --grayish-blue: hsl(246, 25%, 77%);
 }
+
 button {
     border: none;
     outline: none;
 }
+
 body {
     min-height: 100vh;
     background-image: url("../images/bg-intro-mobile.png");
@@ -32,20 +40,26 @@ body {
     font-family: Poppins;
     padding: 4rem .8rem 2rem;
 }
+
 main {
-    display: grid;
     text-align: center;
-    
+}
+
+.page-info {
+    grid-area: page-info;
+    align-self: center;
 }
 
 main h1 {
     color: white;
     margin: 0;
+    line-height: 1.2;
+
 }
 
 main p {
     color: hsla(0, 0%, 100%, 0.658);
-    margin-bottom: 4rem;
+    margin: 1.5rem 0 4rem;
 }
 
 .call_to_aciton_btn {
@@ -53,8 +67,9 @@ main p {
     background-color: var(--blue);
     color: var(--grayish-blue);
     border-radius: 10px;
-    box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.253);
-    font-size: 1rem;
+    box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.164);
+    font-size: .9rem;
+    grid-area: cta;
 }
 
 .call_to_aciton_btn span {
@@ -69,6 +84,7 @@ form {
     gap: 1rem;
     border-radius: 10px;
     margin: 2rem 0;
+    grid-area: form;
 }
 
 form input {
@@ -86,9 +102,9 @@ form input:focus {
 }
 
 form button {
-    padding: 1.2rem;
+    padding: 1.1rem;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: bolder;
     background-color: var(--green);
     color: white;
@@ -99,7 +115,8 @@ form button {
 form p {
     color: var(--grayish-blue);
     margin: 0;
-    font-size: .8rem;
+    font-size: .7rem;
+    justify-self: center;
 }
 
 form p a {
@@ -110,3 +127,34 @@ form p a {
 
 .attribution { font-size: 11px; text-align: center; color: var(--dark-blue); }
 .attribution a { color: white }
+
+@media (min-width: 780px) {
+    body {
+        background-image: url('../images/bg-intro-desktop.png');
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 1fr;
+        column-gap: 3rem;
+        max-width: 80%;
+        margin: 0 auto;
+        grid-template-areas: 
+            ". cta"
+            "page-info form"
+            "page-info form1";
+    }
+
+    main h1 {
+        text-align: start;
+        font-size: 3rem;
+    }
+
+    main p {
+        text-align: start;
+
+    }
+
+
+}
