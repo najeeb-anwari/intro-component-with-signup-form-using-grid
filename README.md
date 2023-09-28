@@ -56,4 +56,4 @@ Users should be able to:
 
 - Frontend Mentor - [@najeeb-anwari](https://www.frontendmentor.io/profile/najeeb-anwari)
 - Github - [@najeeb-anwari](https://github.com/najeeb-anwari)
-- Linkedin - [@nabdul-najeeb-anwari](https://www.linkedin.com/in/abdul-najeeb-anwari/)
+- Linkedin - [@abdul-najeeb-anwari](https://www.linkedin.com/in/abdul-najeeb-anwari/)
