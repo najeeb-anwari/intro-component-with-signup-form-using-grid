@@ -32,6 +32,36 @@ button {
     outline: none;
 }
 
+.input-group {
+    display: grid;
+    position: relative;
+    width: 100%;
+    --min-height: min-content;
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    align-self: center;
+    right: 20px;
+}
+
+.invalid .error-icon {
+    display: block;
+}
+
+.invalid-feedback {
+    display: none;
+    color: var(--red);
+    text-align: right;
+    font-size: .7rem;
+    margin-top: 5px;
+}
+
+.invalid .invalid-feedback {
+    display: block;
+}
+
 body {
     min-height: 100vh;
     background-image: url("../images/bg-intro-mobile.png");
@@ -88,7 +118,7 @@ form {
 }
 
 form input {
-    padding: 1rem 1rem;
+    padding: 1rem;
     color: var(--dark-blue);
     font-weight: 700;
     border : 1px solid var(--grayish-blue);
@@ -161,5 +191,8 @@ form p a {
 
     }
 
+    form {
+        padding: 1.5rem 2rem;
+    }
 
 }
